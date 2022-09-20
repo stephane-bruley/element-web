@@ -12,7 +12,7 @@ const SentryCliPlugin = require("@sentry/webpack-plugin");
 
 dotenv.config();
 let ogImageUrl = process.env.RIOT_OG_IMAGE_URL;
-if (!ogImageUrl) ogImageUrl = 'https://app.element.io/themes/element/img/logos/opengraph.png';
+if (!ogImageUrl) ogImageUrl = 'https://app.element.io/themes/element/img/logos/bakino_logo_512.png';
 
 if (!process.env.VERSION) {
     console.warn("Unset VERSION variable - this may affect build output");

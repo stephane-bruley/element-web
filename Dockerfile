@@ -4,10 +4,10 @@ FROM node:14-buster as builder
 # Support custom branches of the react-sdk and js-sdk. This also helps us build
 # images of element-web develop.
 ARG USE_CUSTOM_SDKS=false
-ARG REACT_SDK_REPO="https://github.com/matrix-org/matrix-react-sdk.git"
-ARG REACT_SDK_BRANCH="master"
-ARG JS_SDK_REPO="https://github.com/matrix-org/matrix-js-sdk.git"
-ARG JS_SDK_BRANCH="master"
+ARG REACT_SDK_REPO="https://github.com/stephane-bruley/matrix-react-sdk.git"
+ARG REACT_SDK_BRANCH="develop"
+ARG JS_SDK_REPO="https://github.com/stephane-bruley/matrix-js-sdk.git"
+ARG JS_SDK_BRANCH="develop"
 
 RUN apt-get update && apt-get install -y git dos2unix
 
