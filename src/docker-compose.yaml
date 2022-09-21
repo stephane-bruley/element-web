@@ -1,0 +1,21 @@
+version: '2.3'
+services:
+  element:
+    build: .
+    image: element-web-bamz:1.0
+    container_name: bamz-element
+    restart: unless-stopped
+    volumes:
+      - /var/data/matrix/bamz-element/config.json:/app/config.json
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.chat.rule=Host(`chat.test.bakino.fr`)"
+      - "traefik.http.routers.chat.priority=14"
+      - "traefik.http.routers.chat.entrypoints=websecure"
+      - "traefik.http.routers.chat.tls.certresolver=mydnschallenge"
+      - "traefik.http.services.chat.loadbalancer.server.port=80"
+
+networks:
+  default:
+    external:
+      name: traefik
