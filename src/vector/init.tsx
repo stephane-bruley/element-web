@@ -142,7 +142,7 @@ export async function loadApp(fragParams: {}) {
         /* webpackPreload: true */
         "./app");
     window.matrixChat = ReactDOM.render(await module.loadApp(fragParams),
-        document.getElementById('matrixchat'));
+        document.getElementById('matrixchat')); 
 }
 
 export async function showError(title: string, messages?: string[]) {
