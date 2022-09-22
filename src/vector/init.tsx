@@ -22,7 +22,7 @@ limitations under the License.
 import olmWasmPath from "@matrix-org/olm/olm.wasm";
 import Olm from '@matrix-org/olm';
 import * as ReactDOM from "react-dom";
-import * as React from "react";
+import * as React from "react"; 
 import * as languageHandler from "matrix-react-sdk/src/languageHandler";
 import SettingsStore from "matrix-react-sdk/src/settings/SettingsStore";
 import PlatformPeg from "matrix-react-sdk/src/PlatformPeg";
